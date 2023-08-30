@@ -1,29 +1,24 @@
 import React from 'react';
-import {Dimensions, StyleSheet, Text, View} from 'react-native';
-
-const {height} = Dimensions.get('screen');
+import {StyleSheet, View} from 'react-native';
+import ContainerA from './components/ContainerA';
+import ContainerB from './components/ContainerB';
 
 const App = () => {
+  const styles = StyleSheet.create({
+    container: {
+      height: 750,
+      backgroundColor: 'black',
+      flexDirection: 'row',
+    },
+    
+    
+  });
   return (
     <View style={styles.container}>
-      <View style={styles.center}>
-      <Text>......</Text>
-        <Text>This is React Native Web!!!</Text>
-      </View>
+      <ContainerA/>
+      <ContainerB/>
     </View>
   );
 };
-
-
-const styles = StyleSheet.create({
-  container: {
-    height,
-  },
-  center: {
-    flex: 1,
-    justifyContent:  'center',
-    alignItems: 'center',
-  },
-});
 
 export default App;
