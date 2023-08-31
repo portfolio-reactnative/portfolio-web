@@ -1,52 +1,58 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
+// import Intro from './Intro';
 
 export default function containerA() {
   const styles = StyleSheet.create({
     containerA: {
-      backgroundColor: 'red',
+      //backgroundColor: 'red',
       flex: 1,
       flexDirection: 'column',
+      justifyContent:"center",
+      alignItems:"center"
     },
 
     containerA1: {
-      backgroundColor: 'brown',
-      flex: 1,
+      fontSize:40,
+      color:'#fff',
+      fontFamily:"Courier Prime",
+
+      
     },
     containerA2: {
-      backgroundColor: 'green',
-      flex: 1,
+      fontSize:30,
+      color:'gold',
     },
     containerA3: {
-      backgroundColor: 'black',
-      flex: 1,
+      fontSize:50,
+      color:'#fff',
     },
     containerA4: {
-      backgroundColor: 'green',
-      flex: 1,
+      fontSize:25,
+      color:'#fff',
+      
     },
-    containerA5: {
-      backgroundColor: 'red',
-      flex: 1,
+    letterH: {
+      color: 'red', // Change the color here
     },
-    containerA6: {
-      backgroundColor: 'cyan',
-      flex: 1,
-    },
-    containerA7: {
-      backgroundColor: 'black',
-      flex: 1,
-    },
+
+    
   });
+  const splitHello = "Hello,".split('H');
+  
   return (
     <View style={styles.containerA}>
-      <View style={styles.containerA1} />
-      <View style={styles.containerA2} />
-      <View style={styles.containerA3} />
-      <View style={styles.containerA4} />
-      <View style={styles.containerA5} />
-      <View style={styles.containerA6} />
-      <View style={styles.containerA7} />
+      <View>
+      <Text style={styles.containerA1}>
+        {splitHello[0]}
+        <Text style={styles.letterH}>H</Text>
+        {splitHello[1]}
+      </Text>
+      
+      <Text style={styles.containerA2} >It's me</Text>
+      <Text style={styles.containerA3} >Sasindu Dilhara</Text>
+      <Text style={styles.containerA4} >And I'm a Web Developer</Text>
+      </View>
     </View>
   );
 }
