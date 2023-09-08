@@ -2,11 +2,10 @@ import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {
-  faFacebook,
+  faSquareFacebook,
   faInstagram,
-  faTwitter,
   faLinkedin,
-  faTwitch,
+  faSquareGithub,
 } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
@@ -14,8 +13,8 @@ const Footer = () => {
     <View style={styles.footer}>
       <View style={styles.socialIcons}>
         <View style={styles.oneIcon}>
-          <a href="https://www.facebook.com/" target="_blank">
-            <FontAwesomeIcon icon={faFacebook} size="lg" style={styles.icon} />
+          <a href="https://web.facebook.com/sasindudilhara.disanayaka" target="_blank">
+            <FontAwesomeIcon icon={faSquareFacebook} size="lg" style={styles.icon} />
           </a>
         </View>
 
@@ -25,21 +24,16 @@ const Footer = () => {
           </a>
         </View>
 
-        <View style={styles.oneIcon}>
-          <a href="https://www.twitter.com/" target="_blank">
-            <FontAwesomeIcon icon={faTwitter} size="lg" style={styles.icon} />
-          </a>
-        </View>
 
         <View style={styles.oneIcon}>
-          <a href="https://www.linkedin.com/" target="_blank">
+          <a href="https://www.linkedin.com/in/sasindu-disanayaka-055980220/" target="_blank">
             <FontAwesomeIcon icon={faLinkedin} size="lg" style={styles.icon} />
           </a>
         </View>
 
         <View style={styles.oneIcon}>
-          <a href="https://www.twitch.tv/" target="_blank">
-            <FontAwesomeIcon icon={faTwitch} size="lg" style={styles.icon} />
+          <a href="https://github.com/SaSinDu10" target="_blank">
+            <FontAwesomeIcon icon={faSquareGithub} size="lg" style={styles.icon} />
           </a>
         </View>
       </View>
@@ -49,21 +43,21 @@ const Footer = () => {
 
 const styles = StyleSheet.create({
   footer: {
-    backgroundColor: '#808080', // Customize your footer's background color
-    paddingVertical: 20,
-    paddingHorizontal: 10,
+    //backgroundColor: '#808080', // Customize your footer's background color
+    //paddingVertical: 20,
+    //paddingHorizontal: 10,
   },
   socialIcons: {
     flexDirection: 'row',
     justifyContent: 'center',
-    marginTop: 10,
+    marginTop: 20,
   },
   icon: {
     marginHorizontal: 50,
-    color: '#333', // Customize the icon color
+    color: '#fff', // Customize the icon color
   },
   oneIcon: {
-    padding: 5,
+    padding: 10,
   },
 });
 

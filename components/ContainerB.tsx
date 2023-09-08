@@ -18,7 +18,7 @@ export default function containerB() {
     },
     navBar: {
       flexDirection: 'row',
-      justifyContent: 'space-around',
+      justifyContent: 'flex-end',
     },
    
   });

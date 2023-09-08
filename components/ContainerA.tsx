@@ -1,58 +1,84 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-// import Intro from './Intro';
+import SocialMedia from '../components/socialIcon';
 
 export default function containerA() {
   const styles = StyleSheet.create({
     containerA: {
-      //backgroundColor: 'red',
       flex: 1,
       flexDirection: 'column',
-      justifyContent:"center",
-      alignItems:"center"
+      justifyContent: 'center',
+      //alignItems: 'center',
     },
 
     containerA1: {
-      fontSize:40,
-      color:'#fff',
-      fontFamily:"Courier Prime",
-
-      
+      fontSize: 90,
+      color: '#fff',
+      justifyContent: 'flex-start',
+      fontFamily: 'Courier Prime',
     },
     containerA2: {
-      fontSize:30,
-      color:'gold',
+      fontSize: 40,
+      color: '#fff',
+      justifyContent: 'flex-start',
+      fontFamily: 'Courier Prime',
     },
     containerA3: {
-      fontSize:50,
-      color:'#fff',
+      fontSize: 75,
+      color: '#fff',
+      justifyContent: 'flex-start',
+      fontFamily: 'Architects Daughter',
     },
     containerA4: {
-      fontSize:25,
-      color:'#fff',
-      
+      fontSize: 50,
+      justifyContent: 'flex-start',
+      color: '#fff',
     },
-    letterH: {
-      color: 'red', // Change the color here
+    fontType1: {
+      color: '#fff',
+      fontFamily: 'Amarante',
     },
-
-    
+    fontType2: {
+      color: '#fff',
+      fontFamily: 'Barlow',
+    },
+    fontType3: {
+      color: '#fff',
+      fontFamily: 'Azeret Mono',
+    },
+    yellowText: {
+      color: '#FCC133', // Style for other letters
+    },
   });
-  const splitHello = "Hello,".split('H');
-  
+
   return (
-    <View style={styles.containerA}>
-      <View>
-      <Text style={styles.containerA1}>
-        {splitHello[0]}
-        <Text style={styles.letterH}>H</Text>
-        {splitHello[1]}
-      </Text>
-      
-      <Text style={styles.containerA2} >It's me</Text>
-      <Text style={styles.containerA3} >Sasindu Dilhara</Text>
-      <Text style={styles.containerA4} >And I'm a Web Developer</Text>
+    <View>
+      <View style={styles.containerA}>
+        <Text style={styles.containerA1}>
+          <Text style={styles.yellowText}> H</Text>
+          <Text style={styles.containerA1}>ello</Text>
+          <Text style={styles.yellowText}>,</Text>
+        </Text>
+
+        <Text style={styles.containerA2}>
+          <Text style={styles.containerA2}> It</Text>
+          <Text style={styles.yellowText}>'</Text>
+          <Text style={styles.containerA2}>s Me</Text>
+        </Text>
+        <Text style={styles.containerA3}>
+          <Text style={styles.yellowText}> S</Text>
+          <Text style={styles.containerA3}>asindu </Text>
+          <Text style={styles.yellowText}>D</Text>
+          <Text style={styles.containerA3}>ilhara</Text>
+          <Text style={styles.yellowText}>.</Text>
+        </Text>
+        <Text style={styles.containerA4}>
+          <Text style={styles.fontType1}> and </Text>
+          <Text style={styles.fontType2}> I'm a </Text>
+          <Text style={styles.fontType3}> Web Developer</Text>
+        </Text>
       </View>
+      <View><SocialMedia /></View>
     </View>
   );
 }

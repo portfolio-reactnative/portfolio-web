@@ -11,7 +11,7 @@ export default function btnCom(pros: any){
         },
         btnText:{
             textAlign:"center",
-            color:"gold",
+            color:"#FCC133",
             fontSize:20,
 
         }
