@@ -1,28 +1,34 @@
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity } from "react-native";
 
-export default function btnCom(pros: any){
-    const styles=StyleSheet.create({
-        btnStyle:{
-            backgroundColor:'#ac215cf',
-            height:5,
-            width:150,
-            padding:20
-        },
-        btnText:{
-            textAlign:"center",
-            color:"#FCC133",
-            fontSize:20,
-
-        }
-
-    });
-
-    return(
-        <TouchableOpacity style={styles.btnStyle}>
-            <Text style={styles.btnText}>{pros.text}</Text>
-        </TouchableOpacity>
-        
-
-    );
+interface BtnComponentProps {
+  text: string;
+  onPress: () => void; // Define the onPress function with no arguments
 }
+
+const BtnComponent: React.FC<BtnComponentProps> = ({ text, onPress }) => {
+  const styles = StyleSheet.create({
+    btnStyle: {
+      backgroundColor: "#ac215c",
+      height: 40, // Adjust height as needed
+      width: 150, // Adjust width as needed
+      padding: 10, // Adjust padding as needed
+      justifyContent: "center",
+      alignItems: "center",
+      borderRadius: 5, // Add border radius for rounded corners
+    },
+    btnText: {
+      textAlign: "center",
+      color: "#FCC133",
+      fontSize: 20,
+    },
+  });
+
+  return (
+    <TouchableOpacity style={styles.btnStyle} onPress={onPress}>
+      <Text style={styles.btnText}>{text}</Text>
+    </TouchableOpacity>
+  );
+};
+
+export default BtnComponent;

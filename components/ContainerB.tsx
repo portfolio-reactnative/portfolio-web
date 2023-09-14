@@ -1,9 +1,14 @@
 import React from 'react';
-import { StyleSheet, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import BtnComponent from './BtnComponents';
 import Picture from './Picture';
+import {useNavigation} from '@react-navigation/native';
+
+
+import { WorkScreen, AboutScreen, ContactScreen } from 'screen-names';
 
 export default function containerB() {
+  const navigation = useNavigation();
   const styles = StyleSheet.create({
     containerB: {
       flex: 1,
@@ -20,20 +25,30 @@ export default function containerB() {
       flexDirection: 'row',
       justifyContent: 'flex-end',
     },
-   
   });
+  
   return (
     <View style={styles.containerB}>
       <View style={styles.containerB1}>
         <View style={styles.navBar}>
-          <BtnComponent text="Home" />
-          <BtnComponent text="Work" />
-          <BtnComponent text="About" />
-          <BtnComponent text="Contact" />
+        
+          <BtnComponent
+            text="Work"
+            onPress={() => navigation.navigate(WorkScreen)}
+          />
+          <BtnComponent
+            text="About"
+            onPress={() => navigation.navigate(AboutScreen)}
+          />
+          <BtnComponent
+            text="Contact"
+            onPress={() => navigation.navigate(ContactScreen)}
+          />
+          
         </View>
       </View>
       <View style={styles.containerB2}>
-        <Picture/>
+        <Picture />
       </View>
     </View>
   );

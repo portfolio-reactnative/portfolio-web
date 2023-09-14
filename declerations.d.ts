@@ -16,3 +16,10 @@ declare module '*.png' {
     const value: any;
     export default value;
   }
+
+  
+declare module 'screen-names' {
+  export const WorkScreen: string;
+  export const AboutScreen: string;
+  export const ContactScreen: string;
+}
