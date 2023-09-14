@@ -1,11 +1,11 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
-import BtnComponent from './BtnComponents';
+import {Button, StyleSheet, View} from 'react-native';
+//import BtnComponent from './BtnComponents';
 import Picture from './Picture';
 import {useNavigation} from '@react-navigation/native';
 
 
-import { WorkScreen, AboutScreen, ContactScreen } from 'screen-names';
+//import { WorkScreen, AboutScreen, ContactScreen } from 'screen-names';
 
 export default function containerB() {
   const navigation = useNavigation();
@@ -29,22 +29,27 @@ export default function containerB() {
   
   return (
     <View style={styles.containerB}>
+      
       <View style={styles.containerB1}>
         <View style={styles.navBar}>
         
-          <BtnComponent
+          {/* <BtnComponent
             text="Work"
-            onPress={() => navigation.navigate(WorkScreen)}
+            //@ts-ignore
+            onPress={() => navigation.navigate("WorkScreen")}
           />
           <BtnComponent
             text="About"
-            onPress={() => navigation.navigate(AboutScreen)}
+            //@ts-ignore
+            onPress={() => navigation.navigate("AboutScreen")}
           />
           <BtnComponent
             text="Contact"
-            onPress={() => navigation.navigate(ContactScreen)}
-          />
+            //@ts-ignore
+            onPress={() => navigation.navigate("ContactScreen")}
+          /> */}
           
+          <Button title='AAA' onPress={() => navigation.navigate("WorkScreen" as never)}></Button>
         </View>
       </View>
       <View style={styles.containerB2}>
