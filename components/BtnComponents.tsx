@@ -9,7 +9,7 @@ interface BtnComponentProps {
 const BtnComponent: React.FC<BtnComponentProps> = ({ text, onPress }) => {
   const styles = StyleSheet.create({
     btnStyle: {
-      backgroundColor: "#ac215c",
+      backgroundColor: "#292930",
       height: 40, // Adjust height as needed
       width: 150, // Adjust width as needed
       padding: 10, // Adjust padding as needed
